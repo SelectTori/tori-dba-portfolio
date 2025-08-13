@@ -1,9 +1,9 @@
 /*
-----------------------------------------
+------------------------------------------
   Created by: Torian Knox
   Created on: 8/13/2025
-  Description: Sample database script
-----------------------------------------
+  Description: Creating a database schema
+------------------------------------------
 */
 
 CREATE DATABASE GrantsDB;
@@ -75,3 +75,4 @@ CREATE TABLE Disbursements(
 CREATE INDEX IX_Awards_Period ON Disbursements(PeriodMonth);
 CREATE INDEX IX_Applications_Status ON Applications(Status);
 CREATE INDEX IX_Providers_Zip ON Providers(ZipCode) INCLUDE (Capacity);
+
