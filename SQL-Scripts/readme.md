@@ -1,1 +1,1 @@
-This folder contains my SQL scripts for various
+This folder contains my SQL scripts
