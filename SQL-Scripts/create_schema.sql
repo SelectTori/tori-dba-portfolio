@@ -25,7 +25,7 @@ CREATE TABLE Providers(
 CREATE TABLE FundingSources(
   FundingID    INT IDENTITY PRIMARY KEY,
   Name         NVARCHAR(200) NOT NULL,
-  FiscalYear   CHAR(9) NOT NULL, -- e.g. 2024-2025
+  FiscalYear   CHAR(9) NOT NULL,
   CapAmount    DECIMAL(14,2) CHECK (CapAmount >= 0)
 );
 
@@ -75,4 +75,5 @@ CREATE TABLE Disbursements(
 CREATE INDEX IX_Awards_Period ON Disbursements(PeriodMonth);
 CREATE INDEX IX_Applications_Status ON Applications(Status);
 CREATE INDEX IX_Providers_Zip ON Providers(ZipCode) INCLUDE (Capacity);
+
 
